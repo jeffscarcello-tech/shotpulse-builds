@@ -9,7 +9,8 @@ Each one runs at 390 px (phone) and 1280 px (desktop) and fails on any page erro
 | File | What it checks | Added |
 |---|---|---|
 | `test_report_box.py` | Settings → Report a problem: button under Check for updates, the in-app box (two questions, fits the screen, Cancel / Open email), the email (address, subject, `1)` `2)` `•` layout, CRLF line breaks, still in order with line breaks removed, 1000-character cut), iPhone and Android device lines, counts only, no page errors | v88 / hotfix22 (replaces `test_report.py` from v87) |
+| `test_nav_home.py` | Home tab (first tab, highlighted, goes back to the start screen), About ShotPulse button first on FAQ and in Settings → About, opens /welcome on the same site and Open ShotPulse comes back, live server address folded under Advanced just above About, FAQ no longer says Game tab, no page errors | v89 |
 
-Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report_box.py test/app.json live/app.json`
+Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report_box.py test/app.json live/app.json` (same for each test file)
 
 Rule: every new feature or fix adds or updates a test file here, in the same push as the build.
