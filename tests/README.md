@@ -8,8 +8,8 @@ Each one runs at 390 px (phone) and 1280 px (desktop) and fails on any page erro
 
 | File | What it checks | Added |
 |---|---|---|
-| `test_report.py` | Settings → Report a problem: button shows, email address, subject and body carry the build and phone details, app keeps working | v87 / hotfix21 |
+| `test_report_box.py` | Settings → Report a problem: button under Check for updates, the in-app box (two questions, fits the screen, Cancel / Open email), the email (address, subject, `1)` `2)` `•` layout, CRLF line breaks, still in order with line breaks removed, 1000-character cut), iPhone and Android device lines, counts only, no page errors | v88 / hotfix22 (replaces `test_report.py` from v87) |
 
-Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report.py test/app.json pending/live-app.json`
+Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report_box.py test/app.json live/app.json`
 
 Rule: every new feature or fix adds or updates a test file here, in the same push as the build.
