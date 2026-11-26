@@ -13,6 +13,7 @@ Each one runs at 390 px (phone) and 1280 px (desktop) and fails on any page erro
 | `test_save_team.py` | Save team button at the bottom of your team page (above Delete, big), saves a name typed without leaving the box, shows Team saved, goes back to Teams, still there after a reload; opponent page says Save opponent and a duplicate name asks to merge instead of leaving; no page errors | v90 |
 | `test_plan_badge.py` | Settings → Team plans: an active plan shows a green ACTIVE badge (not the red LIVE style), an ended plan a grey ENDED badge; accounts line only (the live site has no plans) | v91 |
 | `test_new_team_limit.py` | New team: the free plan allows one team without a plan on top of any teams with an active plan (an ended-plan team counts as the free one, an unused plan does not); accounts line only (the live site has no team limit) | v92 |
+| `test_move_plan.py` | Settings → Team plans → Move to another team: the move reaches the server, the picker closes, the plan shows on the new team and then reads "Can be moved after …" (disabled); accounts line only | v93 |
 
 Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report_box.py test/app.json live/app.json` (same for each test file)
 
