@@ -15,6 +15,7 @@ Each one runs at 390 px (phone) and 1280 px (desktop) and fails on any page erro
 | `test_new_team_limit.py` | New team: the free plan allows one team without a plan on top of any teams with an active plan (an ended-plan team counts as the free one, an unused plan does not); accounts line only (the live site has no team limit) | v92 |
 | `test_move_plan.py` | Settings → Team plans → Move to another team: the move reaches the server, the picker closes, the plan shows on the new team and then reads "Can be moved after …" (disabled); accounts line only | v93 |
 | `test_plan_pick_team.py` | Team plans: "Which team is it for?" lists teams without a plan (one is picked for you when it is the only one), picking teams sets the number of teams, and after paying (checkout answers with `?paid=1`) the plans go on the picked teams; extra plans stay for later; nothing picked opens the team picker; accounts line only | v94 |
+| `test_price_ladder.py` | Team plans: the price ladder shows 1 / 2–4 / 5+ teams with the level you'd pay highlighted, counting plans you already have, and says how many more teams lower the price; accounts line only | v95 |
 
 Run: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers python3 -I tests/test_report_box.py test/app.json live/app.json` (same for each test file)
 
